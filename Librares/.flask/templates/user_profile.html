@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ user.username }}{% endblock %}
+{% block page_title %}{{ user.username }}{% endblock %}
+
+{% block main %}
+    <div class="card">
+        <p>Дата регистрации: {{ user.date_registered.date() }}</p>
+        <p>Пароль: {{ user.password }}</p>
+        <a href="/users/{{ user.id }}/edit">Сменить имя</a>
+        <a href="/users/{{ user.id }}/delete">Удалить аккаунт</a>
+    </div>
+{% endblock %}

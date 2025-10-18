@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ user.username }}{% endblock %}
+{% block page_title %}{{ user.username }}{% endblock %}
+
+{% block main %}
+    <div class="card">
+        <form action="" method="post">
+            <label for="edit_name">Новое имя: </label>
+            <input type="text" name="edit_name" id="edit_name" placeholder="{{ user.username }}"><br>
+            <button type="submit" formmethod="post">Сохранить</button></form>
+        <!-- <a href="/users/{{ user.id }}/edit/submit">Сохранить</a> -->
+    </div>
+{% endblock %}

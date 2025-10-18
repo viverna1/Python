@@ -1,0 +1,10 @@
+{
+    "last_day": "2024-11-06",
+    "encryption_key": None,
+    "DATA_FILE": "players_data.json",
+    "LOG_FILE": "log.txt",
+    "fixed_shield_raising_time": 30,
+    "bee_catch_cooldown": 10,
+    "raid_cooldown": 90,
+    "developer_id": None
+}

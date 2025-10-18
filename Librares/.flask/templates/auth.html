@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Авторизация{% endblock %}
+{% block page_title %}Авторизация{% endblock %}
+
+<!-- Вставить содержимое в блок body -->
+{% block main %}
+<form action="" method="post">
+    <input type="text" name="username" id="username" placeholder="Имя пользователя"><br>
+    <input type="password" name="password" id="password" placeholder="Пароль"><br>
+    <input type="submit" value="Войти">
+</form>
+{% endblock %}

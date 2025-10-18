@@ -1,0 +1,138 @@
+/* Базовые настройки */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+header {
+  background: #2c3e50;
+  color: white;
+  padding: 1rem 0;
+}
+
+/* NAVIGATION */
+nav {
+  background: #34495e;
+  padding: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+nav a:hover {
+  background: #2c3e50;
+}
+
+/* MAIN CONTENT */
+main {
+  min-height: 60vh;
+  padding: 2rem;
+}
+
+/* FORMS */
+form {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* INPUTS */
+input, textarea, select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* BUTTONS */
+button {
+  background: #3498db;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+/* PARAGRAPHS */
+p {
+  margin-bottom: 1rem;
+}
+
+/* LINKS */
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* HEADINGS */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  margin-left: 10px;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1rem;
+}
+
+/* FOOTER */
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #ecf0f1;
+}
+
+footer a:hover {
+  color: #3498db;
+}

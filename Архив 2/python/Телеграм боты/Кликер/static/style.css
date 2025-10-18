@@ -1,0 +1,43 @@
+@import url('https://fonts.cdnfonts.com/css/comic-sans-ms');
+
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #0b1d4f; /* тёмно-синий фон по умолчанию */
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #0b1d4f;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 48px;
+    user-select: none;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clicker-button {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 60px;
+    background: linear-gradient(135deg, #fff6e0 0%, #ffa500 100%);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 40px 80px;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 5px 15px rgba(255, 165, 0, 0.6);
+    transition: background 0.3s ease;
+}
+#clicker-button:hover {
+    filter: brightness(1.1);
+}

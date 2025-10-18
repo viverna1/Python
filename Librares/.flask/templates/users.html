@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Список пользователей{% endblock %}
+{% block page_title %}Список пользователей{% endblock %}
+
+{% block main %}
+    {% if users|length > 0 %}
+        {% for el in users %}
+        <div class="container">
+            <h2>{{ el.username }}</h2>
+            <p>Дата регистрации: {{ el.date_registered.date() }}</p>
+            <a href="/users/{{ el.id }}">Профиль</a>
+        </div>
+        {% endfor %}
+    {% else %}
+        <h3>Пользователей нет</h3>
+    {% endif %}
+{% endblock %}

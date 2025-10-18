@@ -1,0 +1,14 @@
+{
+    "XUSB_GAMEPAD_A": "space",
+    "XUSB_GAMEPAD_B": "b",
+    "XUSB_GAMEPAD_X": "x",
+    "XUSB_GAMEPAD_Y": "y",
+    "XUSB_GAMEPAD_DPAD_UP": "up",
+    "XUSB_GAMEPAD_DPAD_DOWN": "down",
+    "XUSB_GAMEPAD_DPAD_LEFT": "left",
+    "XUSB_GAMEPAD_DPAD_RIGHT": "right",
+    "XUSB_GAMEPAD_START": "esc",
+    "XUSB_GAMEPAD_BACK": "backspace",
+    "XUSB_GAMEPAD_LEFT_SHOULDER": "q",
+    "XUSB_GAMEPAD_RIGHT_SHOULDER": "e"
+}
