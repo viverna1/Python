@@ -1,11 +1,11 @@
 import json
 import os
 import re
-from typing import Callable, Optional
+from typing import Callable, Optional, Any
 
 import keyboard
 
-def ctext(text: any, color: str = 'reset', style: str = 'reset') -> str:
+def ctext(text: Any, color: str = 'reset', style: str = 'reset') -> str:
     """Описание:
         Функция позволяет выводить текст определенным цветом и стилем в терминале.
 
@@ -263,9 +263,9 @@ def choose_menu(options: list[str], title: str = "Выберите опцию:",
 
 def validated_input(
         prompt: str = "",
-        parse_func: Callable[[str], any] = str,
+        parse_func: Callable[[str], Any] = str,
         allow_blank: bool = False
-    ) -> Optional[any]:
+    ) -> Optional[Any]:
     """
     Запрашивает и проверяет пользовательский ввод.
 
@@ -297,31 +297,6 @@ def validated_input(
             return None
         except Exception as error:
             print(f"Произошла ошибка: {error}. Попробуйте еще раз.")
-
-# Примеры использования validated_input:
-if __name__ == "__main__":
-    # Запрос числа (обязательный)
-    age = validated_input("Сколько вам лет? ", parse_func=int)
-    print(f"Возраст: {age}")
-
-    # Запрос числа с плавающей точкой (необязательный)
-    weight = validated_input("Ваш вес (кг, можно пропустить): ", parse_func=float, allow_blank=True)
-    print(f"Вес: {weight}")
-
-    # Запрос обычной строки
-    name = validated_input("Ваше имя: ")
-    print(f"Имя: {name}")
-
-    # Запрос булевого значения
-    def parse_bool(text: str) -> bool:
-        if text.lower() in ['да', 'yes', 'true', '1', 'y']:
-            return True
-        elif text.lower() in ['нет', 'no', 'false', '0', 'n']:
-            return False
-        raise ValueError("Введите 'да' или 'нет'")
-
-    is_active = validated_input("Активен? (да/нет): ", parse_func=parse_bool)
-    print(f"Активен: {is_active}")
 
 
 # Проверка через __module__

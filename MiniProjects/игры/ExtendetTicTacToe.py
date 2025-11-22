@@ -1,5 +1,3 @@
-import sys
-sys.path.append('/home/v-v/Документы/Git/python')
 from functions import clear_console, ctext, remove_ansi_codes
 from time import sleep
 
@@ -8,15 +6,15 @@ class Board:
         self.board = [[ctext(str(j*3 + i + 1), "dark_grey") for i in range(3)] for j in range(3)]
         self.turn = "X"
         self.move_log = []
-        self.max_sym = 6
+        self.max_sym = 7
 
     def draw_board(self):
         clear_console()
-        print(f" {self.board[0][0]} | {self.board[0][1]} | {self.board[0][2]} ")
-        print("---+---+---")
-        print(f" {self.board[1][0]} | {self.board[1][1]} | {self.board[1][2]} ")
-        print("---+---+---")
-        print(f" {self.board[2][0]} | {self.board[2][1]} | {self.board[2][2]} ")
+        print(f" {self.board[0][0]} │ {self.board[0][1]} │ {self.board[0][2]} ")
+        print("───┼───┼───")
+        print(f" {self.board[1][0]} │ {self.board[1][1]} │ {self.board[1][2]} ")
+        print("───┼───┼───")
+        print(f" {self.board[2][0]} │ {self.board[2][1]} │ {self.board[2][2]} ")
 
     def is_busy(self, x, y):
         return remove_ansi_codes(self.board[y][x]) in ("X", "O")
@@ -30,11 +28,11 @@ class Board:
                 del_x, del_y = self.move_log.pop(0)
                 self.board[del_y][del_x] = ctext(str(del_y*3 + del_x + 1), "dark_grey")
 
-            self.turn = "XO"[self.turn == "X"]  # смена очереди
-            
             if len(self.move_log) > self.max_sym - 1:
-                last_sym = self.move_log[0]
-                self.board[last_sym[1]][last_sym[0]] = ctext(self.turn, "red")
+                last_x, last_y = self.move_log[0]
+                self.board[last_y][last_x] = ctext(remove_ansi_codes(self.board[last_y][last_x]), "red")
+
+            self.turn = "XO"[self.turn == "X"]  # смена очереди
 
         else:
             raise Exception(f"Клетка {x}; {y} занята.")
